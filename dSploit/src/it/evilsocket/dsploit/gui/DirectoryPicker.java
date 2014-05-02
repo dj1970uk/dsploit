@@ -58,7 +58,8 @@ public class DirectoryPicker extends ListActivity{
     String preferredStartDir = null;
 
     Bundle extras = getIntent().getExtras();
-    dir = Environment.getExternalStorageDirectory();
+   // dir = Environment.getExternalStorageDirectory();
+   dir = new File("/"); // Device must be rooted for app, so why not start from root directory!!
 
     if(extras != null){
       preferredStartDir = extras.getString(START_DIR);
